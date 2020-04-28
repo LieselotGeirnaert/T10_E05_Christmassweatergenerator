@@ -1,21 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import style from "./index.module.css"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <p className={style.title}>Previous slogans</p>
+    <ul className={style.container}>
+      {data.allContentfulSweater.edges.map(({ node }) => (
+        <li className={style.listitem}>
+          <Link to={node.id} className={style.link}>- designed by "{node.designer}"</Link>
+        </li>
+      ))}
+    </ul>
+    <Link to="/create" className={style.button}>
+      Create your own slogan
+    </Link>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allContentfulSweater {
+      edges {
+        node {
+          id: contentful_id
+          designer
+          slogan
+        }
+      }
+    }
+  }
+`

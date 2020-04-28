@@ -1,0 +1,65 @@
+@import "./reset.css";
+@import "./tokens.module.css";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&display=swap");
+
+@font-face {
+	font-family: 'Venice';
+	src: 	url(../fonts/VeniceClassic.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blocktopia';
+	src: 	url(../fonts/Blocktopia.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  background-image: url(../images/background.png);
+  background-position: center 10%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:any-link {
+  color: white;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+body {
+  font-family: "Venice", sans-serif;
+}
+
+*:focus {
+  outline: 0.1rem dashed var(--green-color);
+}
+
+#___gatsby > div {
+  min-height: 100%;
+  width: 100%;
+  position: fixed; /* https://developers.google.com/web/updates/2016/12/url-bar-resizing */
+  display: grid;
+  grid-template-rows: 20vh 1fr 3rem;
+}
+
+@media (max-height: 800px) {
+  #___gatsby > div {
+    grid-template-rows: auto 1fr 1.5rem;
+  }
+}
