@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
+import { useQueryParam, StringParam } from "use-query-params";
 
 import Layout from "../components/layout"
 import Content from "../components/content"
-// import ShareUrl from "../components/shareUrl"
-// import SEO from "../components/seo"
-
-import { useQueryParam, StringParam } from "use-query-params";
+import ShareUrl from "../components/shareUrl"
+import SEO from "../components/seo"
 
 import style from "./show.module.css"
 
-const ShowPage = () => {
+const ShowPage = ({ location }) => {
 	const [slogan, setSlogan] = useState(null);
 	const [id] = useQueryParam("id", StringParam);
 	
-	console.log(slogan);
-	// const domain = location.origin ? location.origin : ""
+	const domain = location.origin ? location.origin : ""
 	
 	useEffect(() => {
 		const getData = async () => {
@@ -28,11 +27,12 @@ const ShowPage = () => {
 
 	return (
 		<Layout>
-			{/* <SEO title="Share your slogan" /> */}
+			<SEO title="Share your slogan" />
 			{ slogan ? (
 				<>
-          {/* <ShareUrl value={`${domain}/sweater/${id}`} /> */}
 					<Content {...slogan} />
+					<p className={style.designer}> - designed by "{slogan.designer}"</p>
+          <ShareUrl value={`${domain}/sweater/${id}`} />
 				</>
 			) : (
         <p className={style.loading}>Sweater is loading...</p>

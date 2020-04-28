@@ -14,11 +14,10 @@ exports.handler = async function(event, context) {
     const id = event.queryStringParameters.id.replace("/", "")
     let sweater;
 
-    console.log(id);
-    // if (storage.has(id)) {
-    //   console.log("in de storage gevonden");
-    //   sweater = storage.get(id);
-    // } else {
+    if (storage.has(id)) {
+      console.log("in de storage gevonden");
+      sweater = storage.get(id);
+    } else {
       const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID)
       const environment = await space.getEnvironment("master")
       const entry = await environment.getEntry(id)
@@ -28,9 +27,9 @@ exports.handler = async function(event, context) {
         slogan: entry.fields.slogan["en-US"],
       } 
       
-    //   console.log("in storage plaatsen");
-    //   storage.set(id, sweater);
-    // }
+      console.log("in storage plaatsen");
+      storage.set(id, sweater);
+    }
     
     return {
       statusCode: 200,

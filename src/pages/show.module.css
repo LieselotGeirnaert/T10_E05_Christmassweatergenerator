@@ -3,3 +3,18 @@
   font-size: 2.4rem;
   text-align: center;
 }
+
+.designer {
+  align-self: flex-end;
+  background-image: url(../images/bluebg.png);
+  color: white;
+  font-size: 1.2rem;
+  margin: 1.2rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
+
+.button {
+  composes: button from "../styles/controls.module.css";
+  align-self: center;
+}
