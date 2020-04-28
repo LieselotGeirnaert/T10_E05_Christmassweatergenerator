@@ -13,7 +13,6 @@ import Header from "./header"
 import style from "./layout.module.css"
 
 const Layout = ({ children }) => {
-  console.log(children);
   return (
     <>
       <Header />

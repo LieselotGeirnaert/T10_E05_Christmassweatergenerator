@@ -1,14 +1,13 @@
+import { Link } from "gatsby"
 import React from "react"
+
 import Layout from "../components/layout"
 import Content from "../components/content"
-import style from "./sweater.module.css"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 
-export default ({ pageContext }) => {
-  console.log(pageContext);
+import style from "./sweater.module.css"
 
-  
+export default ({ pageContext }) => {  
   return (
     <Layout>
       <SEO title="Christmas Sweater Slogan" />

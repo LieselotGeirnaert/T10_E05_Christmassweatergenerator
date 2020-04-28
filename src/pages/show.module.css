@@ -1,0 +1,5 @@
+.loading {
+  color: var(--green-color);
+  font-size: 2.4rem;
+  text-align: center;
+}

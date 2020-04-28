@@ -11,8 +11,8 @@ const IndexPage = ({ data }) => (
     <p className={style.title}>Previous slogans</p>
     <ul className={style.container}>
       {data.allContentfulSweater.edges.map(({ node }) => (
-        <li className={style.listitem}>
-          <Link to={node.id} className={style.link}>- designed by "{node.designer}"</Link>
+        <li className={style.listitem} key={node.id}>
+          <Link to={`sweater/${node.id}`} className={style.link}>- designed by "{node.designer}"</Link>
         </li>
       ))}
     </ul>

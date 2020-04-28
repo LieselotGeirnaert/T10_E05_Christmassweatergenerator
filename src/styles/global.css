@@ -18,7 +18,7 @@
 
 html {
   box-sizing: border-box;
-  background-image: url(../images/background.png);
+  /* background-image: url(../images/background.png); */
   background-position: center 10%;
 }
 
@@ -55,11 +55,11 @@ body {
   width: 100%;
   position: fixed; /* https://developers.google.com/web/updates/2016/12/url-bar-resizing */
   display: grid;
-  grid-template-rows: 20vh 1fr 3rem;
+  /* grid-template-rows: 20vh 1fr 3rem; */
 }
 
 @media (max-height: 800px) {
   #___gatsby > div {
-    grid-template-rows: auto 1fr 1.5rem;
+    /* grid-template-rows: auto 1fr 1.5rem; */
   }
 }

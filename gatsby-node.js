@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulSweater.edges.forEach(({ node }) => {
     createPage({
-      path: node.id,
+      path: `sweater/${node.id}`,
       component: path.resolve(`./src/templates/sweater.js`),
       context: {
         id: node.id,

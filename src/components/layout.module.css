@@ -1,7 +1,7 @@
 .grid {
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: stretch;
   margin: 0 auto;
   width: 80vw;
@@ -9,10 +9,12 @@
 
 .footer {
   background-image: url(../images/greenbg.png);
+  bottom: 0;
   justify-self: center;
   font-size: 1rem;
   color: white;
   padding: 1rem;
+  position: fixed;
   text-align: center;
   text-decoration: none;
   width: 100%;
