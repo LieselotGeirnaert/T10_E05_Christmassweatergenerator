@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Ugly Christmas Sweater Generator`,
-    description: `The best time of the year`,
+    title: `Ugly Christmas Sweater Slogans`,
+    description: `Create your best slogan`,
     author: `@lieselotgeirnaert`,
   },
   plugins: [

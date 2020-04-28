@@ -11,7 +11,7 @@ export default ({ pageContext }) => {
   
   return (
     <Layout>
-      <SEO title="Je hebt een vuistje gekregen" />
+      <SEO title="Christmas Sweater Slogan" />
       <Content {...pageContext} />
       <p className={style.designer}> - designed by "{pageContext.designer}"</p>
       <Link to="/create" className={style.button}>
