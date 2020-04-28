@@ -9,13 +9,6 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Blocktopia';
-	src: 	url(../fonts/Blocktopia.woff) format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
 html {
   box-sizing: border-box;
   background-image: url(../images/background.png);
@@ -51,15 +44,6 @@ body {
 }
 
 #___gatsby > div {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
-  position: fixed; /* https://developers.google.com/web/updates/2016/12/url-bar-resizing */
-  display: grid;
-  /* grid-template-rows: 20vh 1fr 3rem; */
-}
-
-@media (max-height: 800px) {
-  #___gatsby > div {
-    /* grid-template-rows: auto 1fr 1.5rem; */
-  }
 }

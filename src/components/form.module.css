@@ -42,3 +42,19 @@
   padding: 0.7rem 1.5rem;
   margin: 2rem auto 0;
 }
+
+@media (max-width: 600px) {
+  .form {
+    padding: 2rem;
+    width: 95vw;
+  }
+
+  .label {
+    font-size: 1.4rem;
+  }
+  
+  .input {
+    font-size: 1rem;
+    width: 100%;
+  }
+}

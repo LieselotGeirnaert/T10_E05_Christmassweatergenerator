@@ -4,9 +4,7 @@ import style from "./content.module.css"
 
 const Content = ({ slogan }) => {
   return (
-    <div className={style.container}>
-      <p className={style.slogan}>{slogan}</p>
-    </div>
+    <p className={style.slogan}>{slogan}</p>
   )
 }
 

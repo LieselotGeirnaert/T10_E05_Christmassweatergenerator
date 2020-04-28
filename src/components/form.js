@@ -12,6 +12,7 @@ const Form = () => {
           id="slogan"
           name="slogan"
           className={style.area}
+          required
         ></textarea>
       </label>
       <label htmlFor="designer" className={style.wrapper}>
@@ -22,6 +23,7 @@ const Form = () => {
           name="designer"
           className={style.text}
           placeholder="Carefully designed by..."
+          required
         />
       </label>
       <input

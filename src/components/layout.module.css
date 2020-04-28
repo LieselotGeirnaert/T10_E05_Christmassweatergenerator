@@ -1,9 +1,8 @@
 .grid {
   display: flex;
   flex-flow: column;
-  /* justify-content: space-evenly; */
   align-items: stretch;
-  margin: 0 auto;
+  margin: 5rem auto 10rem;
   width: 80vw;
 }
 
@@ -18,4 +17,10 @@
   text-align: center;
   text-decoration: none;
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100vw;
+  }
 }

@@ -27,3 +27,13 @@ a.link {
   composes: button from "../styles/controls.module.css";
   align-self: center;
 }
+
+@media (max-width: 600px) {
+  .title {
+    margin: 2rem auto;
+  }
+
+  .listitem {
+    margin: 0.5rem auto;
+  }
+}

@@ -1,14 +1,20 @@
-.container {
-  align-items: center;
+.slogan {
   background-image: url(../images/whitebg.png); 
   background-color: #33080A;
   color: var(--green-color);
-  display: flex;
-  font-size: 8rem;
-  height: 20rem;
+  font-size: 5rem;
   justify-content: center;
   margin: 1rem auto;
   padding: 2rem;
   text-align: center;
   width: 50vw;
+}
+
+
+@media (max-width: 600px) {
+  .slogan {
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+    width: 90vw;
+  }
 }

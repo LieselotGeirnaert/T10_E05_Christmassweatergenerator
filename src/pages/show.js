@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 import { useQueryParam, StringParam } from "use-query-params";
 
 import Layout from "../components/layout"

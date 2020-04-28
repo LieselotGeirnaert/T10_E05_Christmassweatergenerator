@@ -12,3 +12,9 @@
   composes: button from "../styles/controls.module.css";
   align-self: center;
 }
+
+@media (max-width: 600px) {
+  .designer {
+    align-self: center;
+  }
+}

@@ -22,3 +22,11 @@
     font-size: 2rem;
   }
 }
+
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
